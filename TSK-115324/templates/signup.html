@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up | Smart Id Scanner</title>
+</head>
+<body>
+<h1>Sign Up</h1>
+<form action="/signup" method="post">
+    <table>
+        <tr>
+            <td>Username:</td>
+            <td><input type="text" placeholder="Enter your name" name="name" required></td>
+        </tr>
+        <tr>
+            <td>E-Mail:</td>
+            <td><input type="email" placeholder="Enter your E-Mail" name="email" required></td>
+        </tr>
+        <tr>
+            <td>Mobile Number:</td>
+            <td><input type="text" placeholder="Enter your Mobile Number" name="number" required></td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td><input type="password" placeholder="Enter your Password" name="password" required></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Sign Up"></td>
+        </tr>
+
+    </table>
+</form>
+<p>already have account?<a href="/login">Login</a> </p>
+{{msg}}
+</body>
+</html>
