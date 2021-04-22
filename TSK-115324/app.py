@@ -67,5 +67,9 @@ def logout():
     session.pop('username', None)
     return render_template('index.html')
 
+@smartIdScanner.route('/upload')
+def upload():
+    return render_template('')
+
 if __name__ == '__main__':
     smartIdScanner.run(debug=True)
