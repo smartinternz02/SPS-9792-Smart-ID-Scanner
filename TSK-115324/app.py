@@ -1,7 +1,12 @@
 from flask import *
 from flask_mysqldb import MySQL
+import os
+
+UPLOAD_FOLDER = './upload'
 
 smartIdScanner = Flask(__name__)
+
+smartIdScanner.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 smartIdScanner.secret_key = 'Ha77rS99hA18'
 
@@ -52,10 +57,8 @@ def login():
             session['id'] = account[0]
             userid = account[0]
             session['email'] = account[1]
-            msg = 'Logged in successfully !'
 
-            msg = 'Logged in successfully !'
-            return render_template('dashboard.html', msg = msg)
+            return render_template('dashboard.html')
         else:
             msg = 'Incorrect username / password !'
     return render_template('login.html', msg = msg)
@@ -67,9 +70,15 @@ def logout():
     session.pop('username', None)
     return render_template('index.html')
 
-@smartIdScanner.route('/upload')
+@smartIdScanner.route('/upload', methods=["GET","POST"])
 def upload():
-    return render_template('')
+    email = session['email']
+    if request.method == 'POST':
+        file = request.files['file']
+        path = os.path.join(smartIdScanner.config['UPLOAD_FOLDER'], str(session['id']) + '__' + file.filename)
+        file.save(path)
+        msg = 'You have successfully uploaded !'
+    return render_template('dashboard.html', msg = msg)
 
 if __name__ == '__main__':
     smartIdScanner.run(debug=True)

@@ -1,0 +1,41 @@
+08/03/2021 Data Mining   				(AN)
+10/03/2021 Distributed Systems   			(AN)
+16/03/2021 Principles of Progrsmming Languages  	(AN)
+20/03/2021 Python Programming   			(AN)
+23/03/2021 Business Economics and Financial Analysis 	(FN)
+24/03/2021 Compiler Design   				(FN)
+25/03/2021 Block Chain Technology 			(AN)
+01/04/2021 Artificial Intelligence  			(FN)
+
+FN = 09:45AM to 12:45PM
+AN = 02:15PM to 05:15PM
+
+TO-DO List
+---------------
+1. Keycybr Internship Tasks
+2. Tech mahindra Test - Done
+3. SmartInternz Courses
+4. Python
+5. Tkinter
+6. Django
+7. Artificial intelligence
+8. Block Chain Technology
+9. M2
+10. M3
+11. Docker
+12. DS and Algorithms
+13. Kubernetes
+
+
+
+
+
+Username: d1lOwhi1PV
+
+Database name: d1lOwhi1PV
+
+Password: hqbOfjaWPc
+
+Server: remotemysql.com
+
+Port: 3306
